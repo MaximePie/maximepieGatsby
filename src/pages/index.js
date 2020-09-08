@@ -1,22 +1,46 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import HomePageSection from "../components/molecules/HomePageSection";
+import projectsImage from '../images/projects.png'
+import coursesImage from '../images/courses.jpg'
+import skillsImage from '../images/skills.jpg'
+import {viewportContext} from "../contexts/viewport";
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const isMobile = React.useContext(viewportContext);
+
+  return (
+    <Layout>
+      <SEO title="Home"/>
+      <HomePageSection
+        redirectPath="/myProjects"
+        title="Mes projets"
+        illustrationPath={projectsImage}
+        text="Découvrez mes créations"
+      />
+      <HomePageSection
+        redirectPath="/myCourses"
+        title="Mes formations"
+        illustrationPath={coursesImage}
+        text="Découvrez les formations que je donne"
+        isInverted={!isMobile}
+      />
+      <HomePageSection
+        redirectPath="/mySkills"
+        title="Mes compétences"
+        illustrationPath={skillsImage}
+        text="Consultez mes compétences"
+      />
+      <HomePageSection
+        redirectPath="/aboutMe"
+        text="Qui suis-je ?"
+        isInverted={!isMobile}
+        variant="selfPresentation"
+      />
+    </Layout>
+  )
+}
 
 export default IndexPage
