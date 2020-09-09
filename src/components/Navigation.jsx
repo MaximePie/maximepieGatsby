@@ -1,21 +1,15 @@
 import React from 'react';
-import {useLocation} from "react-router-dom";
 import { Link } from 'gatsby';
 import {viewportContext} from "../contexts/viewport";
 
 export default function Navigation(props) {
   const isMobile = React.useContext(viewportContext);
 
-  const { pathname } = useLocation();
-
-  const [selectedPath, setSelectedPath] = React.useState(pathname);
-
   return (
     <div className="Navigation">
       <Link
         to="/"
-        className={"Navigation__link " + (selectedPath === '/' ? "Navigation__link--selected" : "")}
-        onClick={() => {setSelectedPath('/')}}
+        className="Navigation__link"
       >
         {!isMobile && ("Accueil")}
         {isMobile && (
@@ -24,8 +18,7 @@ export default function Navigation(props) {
       </Link>
       <Link
         to="/myProjects"
-        className={"Navigation__link " + (selectedPath === '/myProjects' ? "Navigation__link--selected" : "")}
-        onClick={() => {setSelectedPath('/myProjects')}}
+        className="Navigation__link"
       >
         {!isMobile && "Mes projets"}
         {isMobile && (
@@ -34,8 +27,7 @@ export default function Navigation(props) {
       </Link>
       <Link
         to="/aboutMe"
-        className={"Navigation__link " + (selectedPath === '/aboutMe' ? "Navigation__link--selected" : "")}
-        onClick={() => {setSelectedPath('/aboutMe')}}
+        className="Navigation__link"
       >
         {!isMobile && "Qui suis-je ?"}
         {isMobile && (
@@ -44,8 +36,7 @@ export default function Navigation(props) {
       </Link>
       <Link
         to="/ContactPage"
-        className={"Navigation__link " + (selectedPath === '/contact' ? "Navigation__link--selected" : "")}
-        onClick={() => {setSelectedPath('/contact')}}
+        className="Navigation__link"
       >
         {!isMobile && "Contact"}
         {isMobile && (
