@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import {viewportContext} from "../contexts/viewport";
 
-export default function Navigation(props) {
+export default function Navigation() {
   const isMobile = React.useContext(viewportContext);
 
   return (
@@ -25,15 +25,15 @@ export default function Navigation(props) {
           <i className="fas fa-folder"/>
         )}
       </Link>
-      <Link
-        to="/aboutMe"
-        className="Navigation__link"
-      >
-        {!isMobile && "Qui suis-je ?"}
-        {isMobile && (
-          <i className="fas fa-user"/>
-        )}
-      </Link>
+      {/*<Link*/}
+      {/*  to="/aboutMe"*/}
+      {/*  className="Navigation__link"*/}
+      {/*>*/}
+      {/*  {!isMobile && "Qui suis-je ?"}*/}
+      {/*  {isMobile && (*/}
+      {/*    <i className="fas fa-user"/>*/}
+      {/*  )}*/}
+      {/*</Link>*/}
       <Link
         to="/ContactPage"
         className="Navigation__link"

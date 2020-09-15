@@ -2,12 +2,11 @@ import React from 'react';
 import Collapsible from "react-collapsible";
 import {viewportContext} from "../contexts/viewport";
 import Button from './Button';
+import Image from "./image";
 
-export default function Project(props) {
+export default function Project({title, description, imageName, githubLink, applicationLink, badge, isPreview}) {
 
   const isMobile = React.useContext(viewportContext);
-
-  const {title, description, imagePath, githubLink, applicationLink, badge, isPreview} = props;
 
   const [isCollapsed, setCollapseStatus] = React.useState(false);
 
@@ -88,11 +87,12 @@ export default function Project(props) {
             </a>
           )}
         </div>
-        <img
-          src={imagePath}
-          alt={"Image de présentation de " + title}
-          className={"Project__image " + (!applicationLink && "Project__image--no-link")}
-        />
+        {/*<img*/}
+        {/*  src={imagePath}*/}
+        {/*  alt={"Image de présentation de " + title}*/}
+        {/*  className={"Project__image " + (!applicationLink && "Project__image--no-link")}*/}
+        {/*/>*/}
+        <Image imageName={imageName}/>
       </div>
     </div>
   );

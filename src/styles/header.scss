@@ -1,0 +1,19 @@
+.Header {
+  &__title {
+    @include for-phone-only {
+      font-size: 1.25em;
+      margin: 8px;
+    }
+
+    &-side-text {
+      color: $grey;
+      font-style: italic;
+      font-size: 0.75em;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}

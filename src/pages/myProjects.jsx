@@ -1,8 +1,4 @@
 import React from 'react';
-import flashcardstormImage from '../images/flashcarstorm.png';
-import educhubImage from '../images/educhub.jpg';
-import sandboxSimgameImage from '../images/sandbox_simgame.png';
-import clientProjectImage from '../images/clientsProject.jpg';
 
 import Project from '../components/Project';
 import Layout from "../components/layout";
@@ -26,7 +22,7 @@ export default function MyProjects() {
           applicationLink="https://flashcardstorm.herokuapp.com/"
           badge="La favorite"
           githubLink="https://github.com/MaximePie/Flashcardstorm"
-          imagePath={flashcardstormImage}
+          imageName='flashcardstorm'
         />
         <Project
           title="EducHub GIPSI"
@@ -39,7 +35,7 @@ export default function MyProjects() {
           applicationLink="http://educhub.herokuapp.com/"
           badge="La révolutionnaire"
           githubLink="https://github.com/MaximePie/GIPSI"
-          imagePath={educhubImage}
+          imageName={'educhub'}
         />
         <Project
           title="Sandbox Simgame"
@@ -52,7 +48,7 @@ export default function MyProjects() {
           applicationLink=""
           badge="L'inspirante"
           githubLink="https://gitlab.com/Chatmalow/sandbox_simgame"
-          imagePath={sandboxSimgameImage}
+          imageName={'sandboxsimgame'}
         />
         <Project
           title="Votre projet ?"
@@ -64,7 +60,7 @@ export default function MyProjects() {
             "Demandez un devis gratuitement",
           ]}
           badge="La mystérieuse"
-          imagePath={clientProjectImage}
+          imageName={'clientproject'}
           isPreview
         />
       </div>

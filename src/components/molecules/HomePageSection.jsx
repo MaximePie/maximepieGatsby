@@ -3,10 +3,11 @@ import Particles from "react-particles-js";
 import {bubbleParticles} from "../particles";
 import {viewportContext} from "../../contexts/viewport";
 import { Link } from 'gatsby';
+import Image from "../image";
 
 
 export default function HomePageSection(props) {
-  const {redirectPath, title, illustrationPath, text, isInverted, variant} = props;
+  const {redirectPath, title, illustrationName, text, isInverted, variant} = props;
 
   const isMobile = React.useContext(viewportContext);
 
@@ -68,7 +69,7 @@ export default function HomePageSection(props) {
         )}
         {!variant && (
           <>
-            <img src={illustrationPath} alt="Illustration" className="HomePageSection__illustration-image"/>
+            <Image imageName={illustrationName}/>
             <h2 className="HomePageSection__illustration-title">
               <a href={redirectPath} className="HomePageSection__illustration-link">
                 {title}

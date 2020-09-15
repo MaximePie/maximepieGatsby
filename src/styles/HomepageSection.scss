@@ -1,0 +1,119 @@
+.HomePageSection {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  grid-column-gap: 3em;
+  margin: 4em 0;
+  padding: 2em;
+
+  @include for-phone-only {
+    display: flex;
+    flex-direction: column;
+
+    margin: 8px 0;
+    padding: 0 16px;
+  }
+
+  &--inverted {
+    grid-template-columns: 5fr 6fr;
+  }
+
+  &__illustration {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &-link {
+      text-decoration: none;
+      color: $white;
+    }
+
+    &-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: auto;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+
+      font-size: 2.25em;
+      text-align: center;
+
+      transition: transform 250ms;
+
+      @include for-phone-only {
+        font-size: 1.2em;
+      }
+
+      &:after {
+        width: 0;
+        content: '';
+        border-bottom: solid;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: width .5s;
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: translate(-50%, -50%) scale(1.1);
+        transition: transform 250ms;
+
+        &:after {
+          width: 100%;
+          transition: width .5s;
+        }
+      }
+    }
+
+    &-image {
+      width: 100%;
+      filter: brightness(0.5);
+    }
+
+    &-particles {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+    }
+  }
+
+  &__details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    @include for-phone-only {
+      margin: 2em 0;
+    }
+
+    &-text {
+      font-size: 2em;
+    }
+
+    &-link {
+      border-radius: 100px;
+      border: none;
+      background: $darkBeige;
+      color: $dark;
+      text-decoration: none;
+      padding: 8px 16px;
+      font-size: 1.2em;
+      transition: background-color 250ms ease-in-out;
+      margin: 0 8px;
+
+      &:hover {
+        background-color: $beige;
+        transition: background-color 250ms ease-in-out;
+      }
+
+      &-icon {
+        margin: 0 8px 0 4px;
+      }
+    }
+  }
+}

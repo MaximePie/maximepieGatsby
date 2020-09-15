@@ -13,20 +13,79 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
+const Image = ({imageName}) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      projectsImage: file(relativePath: { eq: "projects.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 420) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      coursesImage: file(relativePath: { eq: "courses.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 420) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      skillsImage: file(relativePath: { eq: "skills.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 420) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      flashcardstormImage: file(relativePath: { eq: "flashcarstorm.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 420) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      educhubImage: file(relativePath: { eq: "educhub.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 420) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sandboxsimgameImage: file(relativePath: { eq: "sandbox_simgame.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 420) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      clientprojectImage: file(relativePath: { eq: "clientsProject.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 420) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
-  `)
+  `);
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-}
+  switch (imageName) {
+    case 'projects':
+      return <Img fluid={data.projectsImage.childImageSharp.fluid} />;
+    case 'courses':
+      return <Img fluid={data.coursesImage.childImageSharp.fluid} />;
+    case 'skills':
+      return <Img fluid={data.skillsImage.childImageSharp.fluid} />;
+    case 'flashcardstorm':
+      return <Img fluid={data.flashcardstormImage.childImageSharp.fluid} />;
+    case 'educhub':
+      return <Img fluid={data.educhubImage.childImageSharp.fluid} />;
+    case 'sandboxsimgame':
+      return <Img fluid={data.sandboxsimgameImage.childImageSharp.fluid} />;
+    case 'clientproject':
+      return <Img fluid={data.clientprojectImage.childImageSharp.fluid} />;
+    default:
+      return <Img />
+  }
+};
 
 export default Image
