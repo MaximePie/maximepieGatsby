@@ -39,28 +39,28 @@ const Image = ({imageName}) => {
       }
       flashcardstormImage: file(relativePath: { eq: "flashcarstorm.png" }) {
         childImageSharp {
-          fluid(maxWidth: 420) {
+          fluid(maxWidth: 1800) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       educhubImage: file(relativePath: { eq: "educhub.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 420) {
+          fluid(maxWidth: 1800) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       sandboxsimgameImage: file(relativePath: { eq: "sandbox_simgame.png" }) {
         childImageSharp {
-          fluid(maxWidth: 420) {
+          fluid(maxWidth: 1800) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       clientprojectImage: file(relativePath: { eq: "clientsProject.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 420) {
+          fluid(maxWidth: 1800) {
             ...GatsbyImageSharpFluid
           }
         }

@@ -1,10 +1,9 @@
 import React from 'react';
-import {viewportContext} from "../contexts/viewport";
+// import {viewportContext} from "../../contexts/viewport";
 
-export default function Button(props) {
-  const isMobile = React.useContext(viewportContext);
-
-  const {text, icon, variant, link, isFabIcon} = props;
+export default function Button({text, icon, variant, link, className, isFabIcon}) {
+  // const isMobile = React.useContext(viewportContext);
+  const isMobile = false;
 
   return (
     <a

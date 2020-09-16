@@ -1,12 +1,13 @@
 import React from 'react';
 import Collapsible from "react-collapsible";
-import {viewportContext} from "../contexts/viewport";
-import Button from './Button';
+// import {viewportContext} from "../contexts/viewport";
+import Button from './atoms/Button';
 import Image from "./image";
 
 export default function Project({title, description, imageName, githubLink, applicationLink, badge, isPreview}) {
 
-  const isMobile = React.useContext(viewportContext);
+  // const isMobile = React.useContext(viewportContext);
+  const isMobile = false;
 
   const [isCollapsed, setCollapseStatus] = React.useState(false);
 
@@ -67,7 +68,7 @@ export default function Project({title, description, imageName, githubLink, appl
             <Button
               icon="pen"
               text="Me contacter"
-              link={"/contact"}
+              link={"/ContactPage"}
             />
           )}
         </div>

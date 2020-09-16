@@ -11,7 +11,7 @@ import {graphql, useStaticQuery} from "gatsby"
 import { viewportContext } from '../contexts/viewport'
 
 import Header from "./header"
-import "./layout.css"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
 
@@ -42,20 +42,8 @@ const Layout = ({ children }) => {
     <viewportContext.Provider value={isMobile}>
       <div className="Layout">
         <Header siteTitle={data.site.siteMetadata.title}/>
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0 1.0875rem 1.45rem`,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()},
-            {` `}
-            <a href="https://www.gatsbyjs.org">Créé par Maxime Pie</a>
-          </footer>
-        </div>
+        <main className="Layout__main">{children}</main>
+        <Footer/>
       </div>
     </viewportContext.Provider>
   )

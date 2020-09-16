@@ -12,8 +12,8 @@ const Header = ({siteTitle}) => (
       >
         {siteTitle}
       </Link>
-      <span className="Header__title-side-text">Créateur</span>
     </h1>
+    <span className="Header__subtitle">Développeur Freelance et formateur</span>
     <Navigation/>
   </header>
 );

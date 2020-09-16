@@ -1,19 +1,28 @@
 .Header {
+  position: fixed;
+  z-index: 10;
+  background-color: $dark;
+  width: 100vw;
+  text-align: center;
+
   &__title {
+    margin: 8px 0;
+    text-align: center;
+
     @include for-phone-only {
       font-size: 1.25em;
       margin: 8px;
     }
 
-    &-side-text {
-      color: $grey;
-      font-style: italic;
-      font-size: 0.75em;
-    }
-
     &-link {
       text-decoration: none;
       color: $white;
+      margin-right: 8px;
     }
+  }
+
+  &__subtitle {
+    color: $grey;
+    font-style: italic;
   }
 }

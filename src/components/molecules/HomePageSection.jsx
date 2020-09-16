@@ -1,7 +1,7 @@
 import React from 'react';
 import Particles from "react-particles-js";
 import {bubbleParticles} from "../particles";
-import {viewportContext} from "../../contexts/viewport";
+// import {viewportContext} from "../../contexts/viewport";
 import { Link } from 'gatsby';
 import Image from "../image";
 
@@ -9,7 +9,7 @@ import Image from "../image";
 export default function HomePageSection(props) {
   const {redirectPath, title, illustrationName, text, isInverted, variant} = props;
 
-  const isMobile = React.useContext(viewportContext);
+  // const isMobile = React.useContext(viewportContext);
 
   return (
     <div className={"HomePageSection " + (isInverted ? 'HomePageSection--inverted' : '')}>
@@ -19,9 +19,10 @@ export default function HomePageSection(props) {
             {homepageSectionIllustration()}
           </div>
           <div className="HomePageSection__details">
-            {!isMobile && (
-              <p className="HomePageSection__details-text">{text}</p>
-            )}
+            {/* TODO - Restore once mobile calculation is restored */}
+            {/*{!isMobile && (*/}
+            <p className="HomePageSection__details-text">{text}</p>
+            {/*)}*/}
             <Link to={redirectPath} className="HomePageSection__details-link">
               <i className="fas fa-search HomePageSection__details-link-icon"/>
               Explorer
@@ -32,9 +33,10 @@ export default function HomePageSection(props) {
       {isInverted && (
         <>
           <div className="HomePageSection__details">
-            {!isMobile && (
-              <p className="HomePageSection__details-text">{text}</p>
-            )}
+            {/* TODO - Restore once mobile calculation is restored */}
+            {/*{!isMobile && (*/}
+            <p className="HomePageSection__details-text">{text}</p>
+            {/*)}*/}
             <Link to={redirectPath} className="HomePageSection__details-link">
               <i className="fas fa-search HomePageSection__details-link-icon"/>
               Explorer

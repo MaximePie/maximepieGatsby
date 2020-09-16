@@ -1,0 +1,22 @@
+.Navigation {
+  margin: 8px 0 16px;
+  text-align: center;
+
+  &__link {
+    text-decoration: none;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 100px;
+    border: none;
+    font-size: 1.25em;
+
+    // TODO - Change to $grey when dynamic route identification is restored
+    color: $beige;
+    transition: color 250ms ease-in-out;
+
+    &--selected {
+      //color: $beige;
+      transition: color 250ms ease-in-out;
+    }
+  }
+}

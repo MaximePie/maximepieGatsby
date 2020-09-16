@@ -6,8 +6,8 @@ export default function ContactPage(props) {
   return (
     <Layout>
       <SEO title="Contact"/>
-      <h1>Me contacter</h1>
       <div className="ContactPage">
+      <h1>Me contacter</h1>
         <div className="ContactPage__container">
           <h2>
             Travaillons ensemble !

@@ -1,0 +1,124 @@
+.Project {
+  width: 99vw;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  overflow-x: hidden;
+  margin: 2em 0;
+  color: initial;
+
+  @include for-phone-only {
+    grid-template-columns: initial;
+    grid-template-rows: 1fr 50%;
+    height: 70vh;
+  }
+
+  &__title {
+    @include for-phone-only {
+      font-size: 1.5em;
+    }
+  }
+
+  &__badge {
+    padding: 4px 8px;
+    border: solid;
+    border-radius: 100px;
+    font-weight: 500;
+    color: $golden;
+
+    &-icon {
+      margin: 0 8px 0 4px;
+    }
+  }
+
+  &__details {
+    padding: 8px;
+    background: $white;
+    color: $dark;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    min-width: 500px;
+
+    @include for-phone-only {
+      min-width: 0;
+      padding: 0 8px;
+    }
+
+    .Collapsible {
+      margin-top: 16px;
+
+      .Collapsible__trigger {
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+
+    .Project__description {
+      line-height: 2em;
+
+      &-element {
+        margin: 2em 0;
+        font-weight: 600;
+        @include for-phone-only {
+          margin: 0.6em 0;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__image-container {
+    overflow: hidden;
+    position: relative;
+
+    img {
+      height: 100%;
+      filter: brightness(0.6);
+    }
+
+    .Project__image-action-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 2.5em;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+
+      @include for-phone-only {
+        font-size: 1.5em;
+      }
+
+      .Project__image-action-icon {
+        margin: 8px 0;
+      }
+
+      .Project__image-action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        color: $white;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      &:hover ~ img {
+        transform: scale(1.02);
+        filter: brightness(0.7) blur(0px);
+        transition: transform 200ms ease, filter 200ms ease;
+      }
+    }
+  }
+
+  &__actions {
+    margin: 16px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-around;
+
+    @include for-phone-only {
+      margin: 8px;
+      padding: 8px;
+    }
+  }
+}

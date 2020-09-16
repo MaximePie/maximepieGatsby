@@ -1,0 +1,31 @@
+.ContactPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 120px;
+
+  @include for-phone-only {
+    height: initial;
+  }
+
+  &__container {
+    width: 40vw;
+    background: $white;
+    color: $dark;
+
+    padding: 8px 16px;
+    border-radius: 6px;
+
+    @include for-phone-only {
+      width: initial;
+      border-radius: 0;
+    }
+  }
+
+  &__mail {
+    font-weight: 600;
+    display: block;
+    margin: 8px 0;
+  }
+}
