@@ -72,10 +72,19 @@ const Image = ({imageName}) => {
           }
         }
       }
+      tutoreact: file(relativePath: { eq: "tutoreact.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
 
   switch (imageName) {
+    case 'tutoreact':
+      return <Img fluid={data.tutoreact.childImageSharp.fluid} />;
     case 'pi':
       return <Img fluid={data.pi.childImageSharp.fluid} />;
     case 'projects':

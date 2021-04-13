@@ -16,6 +16,20 @@ const projects = [
     imageName: 'pi',
   },
   {
+    title: "Entraînement React JS",
+    description: [
+      "Exercices à réaliser en autonomie",
+      "Vidéos de correction",
+      "Apprentissage par pente douce",
+      "Une soixantaine d'exercices et projets disponibles",
+      "Apprentissage en profondeur de React JS",
+    ],
+    applicationLink: "https://youtube.com/playlist?list=PLxPhnioBp0U15Q3HOkrvgpU_e2aL3PAh3",
+    githubLink: "https://github.com/MaximePie/react-entrainement",
+    badge: "L'utile",
+    imageName: 'tutoreact',
+  },
+  {
     title: "Flashcardstorm",
     description: [
       "Application de révision par répétition espacée",
