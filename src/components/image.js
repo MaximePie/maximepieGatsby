@@ -16,6 +16,13 @@ import Img from "gatsby-image"
 const Image = ({imageName}) => {
   const data = useStaticQuery(graphql`
     query {
+      pi: file(relativePath: { eq: "pi.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 420) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       projectsImage: file(relativePath: { eq: "projects.png" }) {
         childImageSharp {
           fluid(maxWidth: 420) {
@@ -69,6 +76,8 @@ const Image = ({imageName}) => {
   `);
 
   switch (imageName) {
+    case 'pi':
+      return <Img fluid={data.pi.childImageSharp.fluid} />;
     case 'projects':
       return <Img fluid={data.projectsImage.childImageSharp.fluid} />;
     case 'courses':

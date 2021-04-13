@@ -4,7 +4,9 @@ import Collapsible from "react-collapsible";
 import Button from './atoms/Button';
 import Image from "./image";
 
-export default function Project({title, description, imageName, githubLink, applicationLink, badge, isPreview}) {
+export default function Project({project}) {
+
+  const {title, description, imageName, githubLink, applicationLink, badge, isPreview} = project;
 
   // const isMobile = React.useContext(viewportContext);
   const isMobile = false;
@@ -78,21 +80,16 @@ export default function Project({title, description, imageName, githubLink, appl
           {applicationLink && (
             <a href={applicationLink} className="Project__image-action">
               <i className="fas fa-question-circle Project__image-action-icon"/>
-              Découvrir l'application
+              Découvrir
             </a>
           )}
           {isPreview && (
-            <a href={"/contact"} className="Project__image-action Project__image-action--preview">
+            <a href={"/ContactPage"} className="Project__image-action Project__image-action--preview">
               <i className="fas fa-play Project__image-action-icon"/>
               Me contacter
             </a>
           )}
         </div>
-        {/*<img*/}
-        {/*  src={imagePath}*/}
-        {/*  alt={"Image de présentation de " + title}*/}
-        {/*  className={"Project__image " + (!applicationLink && "Project__image--no-link")}*/}
-        {/*/>*/}
         <Image imageName={imageName}/>
       </div>
     </div>
