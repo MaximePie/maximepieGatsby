@@ -26,12 +26,6 @@ const IndexPage = () => {
           isInverted={!isMobile}
         />
         <HomePageSection
-          redirectPath="/mySkills"
-          title="Mes compétences"
-          illustrationName="skills"
-          text="Consultez mes compétences"
-        />
-        <HomePageSection
           redirectPath="/aboutMe"
           text="Qui suis-je ?"
           isInverted={!isMobile}
