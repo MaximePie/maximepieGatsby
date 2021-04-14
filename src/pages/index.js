@@ -22,7 +22,7 @@ const IndexPage = () => {
           redirectPath="/myCourses"
           title="Mes formations"
           illustrationName="courses"
-          text="Découvrez les formations que je donne"
+          text="Découvrez les formations que je propose"
           isInverted={!isMobile}
         />
         <HomePageSection

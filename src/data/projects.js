@@ -1,7 +1,5 @@
 // This file will contain all projects data so we can centralize them
 
-import React from "react";
-
 const projects = [
   {
     title: "Mémoriser Pi",

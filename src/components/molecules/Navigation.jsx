@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import {viewportContext} from "../contexts/viewport";
+import {viewportContext} from "../../contexts/viewport";
 
 export default function Navigation() {
   const isMobile = React.useContext(viewportContext);
@@ -14,6 +14,15 @@ export default function Navigation() {
         {!isMobile && ("Accueil")}
         {isMobile && (
           <i className="fas fa-home"/>
+        )}
+      </Link>
+      <Link
+        to="/myCourses"
+        className="Navigation__link"
+      >
+        {!isMobile && ("Cours")}
+        {isMobile && (
+          <i className="fas fa-chalkboard-teacher"/>
         )}
       </Link>
       <Link

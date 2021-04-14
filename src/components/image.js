@@ -79,10 +79,19 @@ const Image = ({imageName}) => {
           }
         }
       }
+      reactapi: file(relativePath: { eq: "reactapi.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
 
   switch (imageName) {
+    case 'reactapi':
+      return <Img fluid={data.reactapi.childImageSharp.fluid} />;
     case 'tutoreact':
       return <Img fluid={data.tutoreact.childImageSharp.fluid} />;
     case 'pi':
