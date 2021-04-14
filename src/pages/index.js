@@ -10,7 +10,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home"/>
+      <SEO title="Accueil"/>
       <div className="Home">
         <HomePageSection
           redirectPath="/myProjects"

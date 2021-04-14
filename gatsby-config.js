@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Maxime Pie`,
-    description: `Portfolio de Maxime Pie qui vise à présenter ses projets personnels ainsi que ses compétences de formation et ses compétences techniques`,
+    description: `Portfolio de Maxime Pie qui vise à présenter ses projets personnels, les formations qu'il propose, et ses compétences techniques`,
     author: `Maxime Pie`,
   },
   plugins: [
