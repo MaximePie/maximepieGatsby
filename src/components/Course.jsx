@@ -2,9 +2,16 @@ import React from 'react';
 import Image from "./image";
 
 export default function Course({ course }) {
-  const {imageName, title, length, description, link} = course;
+  const {imageName, title, length, description, link, isAvailable } = course;
   return (
     <div className="Course">
+      {!isAvailable && (
+        <div className="Course--isUnavailable">
+          <p className="Course--isUnavailable__text">
+            Ce cours n'est pas disponible pour le moment. Revenez plus tard !
+          </p>
+        </div>
+      )}
       <div className="Course__image">
         <Image imageName={imageName}/>
       </div>
@@ -17,7 +24,7 @@ export default function Course({ course }) {
       </div>
       <div className="Course__footer">
         <a className="Course__action" href={link}>
-          Découvrir
+          {isAvailable ? "Découvrir" : "Arrive bientôt"}
         </a>
       </div>
     </div>

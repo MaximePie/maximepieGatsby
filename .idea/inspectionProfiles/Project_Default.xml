@@ -17,7 +17,6 @@
     <inspection_tool class="ClassOverridesFieldOfSuperClassInspection" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="CompactCanBeUsedInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="ComparisonOperandsOrderInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
-    <inspection_tool class="ConditionalExpressionJS" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="ConditionalExpressionWithIdenticalBranchesJS" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="ConfusingFloatingPointLiteralJS" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="ConfusingPlusesOrMinusesJS" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -285,6 +284,11 @@
       </option>
     </inspection_tool>
     <inspection_tool class="ShortEchoTagCanBeUsedInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
+    </inspection_tool>
     <inspection_tool class="SqlGotoInspection" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="SqlMissingColumnAliasesInspection" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="SqlNamedArgumentsInspection" enabled="true" level="WARNING" enabled_by_default="true" />

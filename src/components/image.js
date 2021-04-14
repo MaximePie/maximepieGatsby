@@ -86,10 +86,28 @@ const Image = ({imageName}) => {
           }
         }
       }
+      js: file(relativePath: { eq: "js.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cnv: file(relativePath: { eq: "cnv.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
 
   switch (imageName) {
+    case 'js':
+      return <Img fluid={data.js.childImageSharp.fluid} />;
+    case 'cnv':
+      return <Img fluid={data.cnv.childImageSharp.fluid} />;
     case 'reactapi':
       return <Img fluid={data.reactapi.childImageSharp.fluid} />;
     case 'tutoreact':

@@ -1,10 +1,37 @@
 .Course {
   border: solid;
   background: white;
-
+  position: relative;
   color: #252525;
 
   border-radius: 8px;
+
+  &--isUnavailable {
+    transition: opacity 250ms ease;
+    opacity: 1;
+
+    position: absolute;
+    background: #232323bf;
+    z-index: 2;
+    height: 100%;
+    width: calc(100% - 16px);
+    color: white;
+    padding: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__text {
+      width: calc(100% - 16px);
+    }
+
+    &:hover {
+      transition: opacity 250ms ease;
+      opacity: 0;
+    }
+  }
 
   &__title {
     text-align: center;
@@ -13,6 +40,10 @@
   &__image {
     img {
       border-radius: 4px 4px 0 0;
+    }
+
+    .gatsby-image-wrapper {
+      max-height: 120px;
     }
   }
 
