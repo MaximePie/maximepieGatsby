@@ -14,5 +14,13 @@ $cardWidth: 220px;
     grid-template-columns: repeat(3, $cardWidth);
     grid-column-gap: 8px;
     grid-row-gap: 8px;
+
+    @include for-phone-only {
+      width: $cardWidth;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
   }
 }

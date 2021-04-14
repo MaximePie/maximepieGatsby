@@ -10,7 +10,8 @@
   @include for-phone-only {
     grid-template-columns: initial;
     grid-template-rows: 1fr 50%;
-    height: 70vh;
+    height: initial;
+    overflow-x: initial;
   }
 
   &__title {
