@@ -13,7 +13,7 @@ const Header = ({siteTitle}) => (
         {siteTitle}
       </Link>
     </h1>
-    <span className="Header__subtitle">Développeur Freelance et formateur</span>
+    <span className="Header__subtitle">Formateur Web et créateur de super-héros</span>
     <Navigation/>
   </header>
 );

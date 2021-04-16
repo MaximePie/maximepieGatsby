@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "./image";
+import CourseLength from "./CourseLength.jsx"
 
 export default function Course({ course }) {
   const {imageName, title, length, description, link, isAvailable } = course;
@@ -17,7 +18,7 @@ export default function Course({ course }) {
       </div>
       <div className="Course__body">
         <h3 className="Course__title">{title}</h3>
-        <span><i className="fas fa-clock"/> {length}h</span>
+        <CourseLength details={length}/>
         <p className="Course__description">
           {description}
         </p>

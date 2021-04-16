@@ -2,15 +2,23 @@ const courses = [
   {
     isAvailable: true,
     imageName: 'tutoreact',
-    length: 105,
-    title: 'ReactJS en détails',
+    length: {
+      basic: 35,
+      pro: 70,
+      expert: 105,
+    },
+    title: 'ReactJS pour Webapp',
     description: "Apprenez à maîtriser la librairie React de A à Y !",
     link: "https://github.com/MaximePie/react-entrainement",
   },
   {
     isAvailable: true,
     imageName: 'reactapi',
-    length: 35,
+    length: {
+      basic: 35,
+      pro: 70,
+      expert: 105,
+    },
     title: 'ReactJS avec une API',
     description: "Apprenez rapidement à coder une application REST en React et Symfony",
     link: "https://github.com/MaximePie/formation-react-api",

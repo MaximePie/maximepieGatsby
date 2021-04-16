@@ -34,15 +34,6 @@ export default function Navigation() {
           <i className="fas fa-folder"/>
         )}
       </Link>
-      {/*<Link*/}
-      {/*  to="/aboutMe"*/}
-      {/*  className="Navigation__link"*/}
-      {/*>*/}
-      {/*  {!isMobile && "Qui suis-je ?"}*/}
-      {/*  {isMobile && (*/}
-      {/*    <i className="fas fa-user"/>*/}
-      {/*  )}*/}
-      {/*</Link>*/}
       <Link
         to="/ContactPage"
         className="Navigation__link"
